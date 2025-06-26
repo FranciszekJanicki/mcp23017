@@ -5,9 +5,7 @@ target_sources(mcp23017 PRIVATE
 )
 
 target_include_directories(mcp23017 PUBLIC
-)
-
-target_link_libraries(mcp23017 PRIVATE
+    ${CMAKE_CURRENT_SOURCE_DIR}
 )
 
 target_compile_options(mcp23017 PUBLIC
