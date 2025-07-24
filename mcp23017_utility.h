@@ -3,8 +3,9 @@
 
 #include "mcp23017_config.h"
 
-inline uint8_t mcp23017_separate_bank_port_to_address(mcp23017_port_t port,
-                                                      mcp23017_reg_address_t address)
+inline uint8_t mcp23017_separate_bank_port_to_address(
+    mcp23017_port_t port,
+    mcp23017_reg_address_t address)
 {
     switch (port) {
         case MCP23017_PORT_A:
@@ -16,8 +17,9 @@ inline uint8_t mcp23017_separate_bank_port_to_address(mcp23017_port_t port,
     }
 }
 
-inline uint8_t mcp23017_common_bank_port_to_address(mcp23017_port_t port,
-                                                    mcp23017_reg_address_t address)
+inline uint8_t mcp23017_common_bank_port_to_address(
+    mcp23017_port_t port,
+    mcp23017_reg_address_t address)
 {
     switch (port) {
         case MCP23017_PORT_A:
