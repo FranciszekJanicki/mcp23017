@@ -4,6 +4,10 @@
 #include "mcp23017_config.h"
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef union {
     uint8_t io7 : 1;
     uint8_t io6 : 1;
@@ -112,5 +116,9 @@ typedef struct {
     uint8_t gp1 : 1;
     uint8_t gp0 : 1;
 } mcp23017_gpio_reg_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP23017_MCP23017_REGISTERS_H

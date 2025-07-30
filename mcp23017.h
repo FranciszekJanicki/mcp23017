@@ -4,6 +4,10 @@
 #include "mcp23017_config.h"
 #include "mcp23017_registers.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef struct {
     mcp23017_config_t config;
     mcp23017_interface_t interface;
@@ -89,5 +93,9 @@ mcp23017_err_t mcp23017_get_gpio_reg(mcp23017_t const* mcp23017,
 mcp23017_err_t mcp23017_set_gpio_reg(mcp23017_t const* mcp23017,
                                      mcp23017_port_t port,
                                      mcp23017_gpio_reg_t const* reg);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP23017_MCP23017_H

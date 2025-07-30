@@ -4,6 +4,10 @@
 #include <stddef.h>
 #include <stdint.h>
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 typedef enum {
     MCP23017_ERR_OK = 0,
     MCP23017_ERR_FAIL = 1 << 0,
@@ -137,5 +141,9 @@ typedef struct {
     mcp23017_err_t (*bus_write_data)(void*, uint8_t, uint8_t const*, size_t);
     mcp23017_err_t (*bus_read_data)(void*, uint8_t, uint8_t*, size_t);
 } mcp23017_interface_t;
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP23017_MCP23017_CONFIG_H

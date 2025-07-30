@@ -3,6 +3,10 @@
 
 #include "mcp23017_config.h"
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 inline uint8_t mcp23017_separate_bank_port_to_address(
     mcp23017_port_t port,
     mcp23017_reg_address_t address)
@@ -44,5 +48,9 @@ inline uint8_t mcp23017_port_to_address(mcp23017_port_t port,
             return 0U;
     }
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // MCP23017_MCP23017_UTILITY_H
